@@ -21,10 +21,11 @@ function make_incremental_folder_backup {
     mkdir -p "$BACKUP_DIR"
   fi
 
-  local SAVE_PATH=$BACKUP_DIR/$APP_NAME-$DATE
+  local SNAPSHOT_PATH=$BACKUP_DIR/$APP_NAME
+  local SAVE_PATH=$SNAPSHOT_PATH-$DATE
 
   # Make an incremental backup of the web app directory
-  tar -czf "$SAVE_PATH.tar.gz" -g "$SAVE_PATH.snapshot" "$WEB_APP_DIR"
+  tar -czf "$SAVE_PATH.tar.gz" -g "$SNAPSHOT_PATH.snapshot" "$WEB_APP_DIR"
 
   # Print a message indicating that the backups were successfully created
   echo "Incremental backups created successfully on $SAVE_PATH.tar.gz."
