@@ -64,6 +64,6 @@ restore_web_app_with_exclusion() {
 
 ### Example
 
-`restore_web_app_with_exclusion laravel /tmp/backups/a/b /tmp/backups/a/b/laravel 2`
+`restore_web_app_with_exclusion laravel "/tmp/backups/a/b" "/tmp/backups/a/b/laravel" 2`
 
 Restore the incremental backups for app "laravel" from /tmp/backups/a/b except the last 2 ones.
