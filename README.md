@@ -84,6 +84,7 @@ Restore the incremental backups for app "laravel" from /tmp/backups/a/b except t
 
 ## PostgreSQL full backup routine
 
+```
 function backup_database() {
   local DB_NAME="$1"
   local BACKUP_DIR="$2/$(date +%Y-%m)/postgres"
