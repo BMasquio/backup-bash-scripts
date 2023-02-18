@@ -1,16 +1,21 @@
 # backup-bash-scripts
 
 ## Setup
-### Install postfix
+#### Install postfix
 ```sudo apt-get install postfix```
 
-### Setup cron
+#### Setup cron
 ```crontab -e```
 
-### Cron logs
+#### Cron logs
 ```sudo tail -f /var/mail/root```
 
-### 
+### Setup cron
+#### User root
+`* * * * * path/to/app_backup.sh`
+
+#### User postgres
+`* * * * * path/to/pgsql_backup.sh`
 
 Bash toolkit in bash for backup web applications
 
