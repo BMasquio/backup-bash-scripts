@@ -104,7 +104,7 @@ function backup_database() {
   # Backup the database and compress the output using gzip
   pg_dump "$DB_NAME" | gzip > "${BACKUP_DIR}/${BACKUP_FILENAME}"
 }
-
+```
 
 ### Example
 sudo su - postgres -c "source ~/.bashrc && backup_database laravel /tmp/backups"
