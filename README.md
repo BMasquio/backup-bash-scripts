@@ -17,6 +17,9 @@
 #### User postgres
 `* * * * * path/to/pgsql_backup.sh`
 
+#### Setup permissions to folder
+`usermod -a -G backup postgres && sudo chmod g+w path/to/backups -R`
+
 Bash toolkit in bash for backup web applications
 
 ## make_incremental_folder_backup
