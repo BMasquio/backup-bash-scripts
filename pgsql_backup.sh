@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function backup_database() {
   local DB_NAME="$1"
   local BACKUP_DIR="$2/$(date +%Y-%m)/postgres"
@@ -14,4 +16,3 @@ function backup_database() {
 }
 
 backup_database laravel /tmp/backups
-
